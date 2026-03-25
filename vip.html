@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>#1 [ STX ] | VIP Store | المتجر</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&family=Outfit:wght@400;700;900&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/js/all.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.2/dist/gsap.min.js"></script>
+</head>
+<body class="vip-page">
+    <div id="loading-screen" class="loading-screen">
+        <div class="loader">
+            <h1 class="stx-text">STX VIP</h1>
+        </div>
+    </div>
+
+    <div class="background-effects">
+        <div id="fire-container"></div>
+        <div id="smoke-container"></div>
+    </div>
+
+    <nav class="navbar">
+        <div class="container nav-content">
+            <div class="logo">
+                <h1 class="glow-text">STEEL <span>X</span></h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html" data-i18n="nav_home">الرئيسية</a></li>
+                <li><a href="vip.html" class="active" data-i18n="nav_vip">متجر VIP</a></li>
+                <li><a href="index.html#leaderboard" data-i18n="nav_leaderboard">المتصدرين</a></li>
+                <li><a href="dashboard.html" data-i18n="nav_dash">لوحة التحكم</a></li>
+            </ul>
+            <div class="nav-actions">
+                <div class="lang-switcher">
+                    <select id="lang-select">
+                        <option value="ar">AR</option>
+                        <option value="en">EN</option>
+                        <option value="ru">RU</option>
+                        <option value="uk">UK</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section class="vip-hero">
+            <div class="container">
+                <h1 class="section-title reveal-text-big" data-i18n="vip_title">باقات VIP</h1>
+                <p class="section-subtitle reveal-text" data-i18n="vip_subtitle">ادعم السيرفر واحصل على مميزات حصرية داخل اللعبة وفي الديسكورد.</p>
+            </div>
+        </section>
+
+        <section class="vip-tiers">
+            <div class="container tiers-grid">
+                <div class="tier-card tier-1 reveal-card">
+                    <div class="tier-header">
+                        <i class="fas fa-medal"></i>
+                        <h3>VIP الماسي</h3>
+                        <span class="price">$10/شهر</span>
+                    </div>
+                    <ul class="tier-features">
+                        <li><i class="fas fa-check"></i> تخطي طابور الانتظار (مستوى 3)</li>
+                        <li><i class="fas fa-check"></i> رومات خاصة بالديسكورد</li>
+                        <li><i class="fas fa-check"></i> رتب "🥇𝐆𝐨𝐥𝐝 𝐃𝐨𝐧𝐞𝐭𝐞𝐫"</li>
+                        <li><i class="fas fa-check"></i> أولوية في الفعاليات</li>
+                    </ul>
+                    <a href="https://discord.gg/stx1" class="btn btn-primary tier-btn">اشترك الآن</a>
+                </div>
+
+                <div class="tier-card tier-featured reveal-card">
+                    <div class="tier-header">
+                        <i class="fas fa-crown"></i>
+                        <h3>الملك الذهبي</h3>
+                        <span class="price">$20/شهر</span>
+                    </div>
+                    <ul class="tier-features">
+                        <li><i class="fas fa-check"></i> تخطي طابور الانتظار (مستوى 3)</li>
+                        <li><i class="fas fa-check"></i> رومات خاصة (VIP+VVIP)</li>
+                        <li><i class="fas fa-check"></i> رتبة "🏆 𝐕𝐈𝐏 𝐖𝐡𝐢𝐭𝐞𝐥𝐢𝐬𝐭"</li>
+                        <li><i class="fas fa-check"></i> شات كيل ماسج</li>
+                    </ul>
+                    <a href="https://discord.gg/stx1" class="btn btn-secondary tier-btn">الأكثر طلبًا</a>
+                </div>
+
+                <div class="tier-card tier-3 reveal-card">
+                    <div class="tier-header">
+                        <i class="fas fa-star"></i>
+                        <h3>VIP فضي</h3>
+                        <span class="price">$5/شهر</span>
+                    </div>
+                    <ul class="tier-features">
+                        <li><i class="fas fa-check"></i> تخطي طابور الانتظار (مستوى 1)</li>
+                        <li><i class="fas fa-check"></i> رومات خاصة بالديسكورد</li>
+                        <li><i class="fas fa-check"></i> رتبة "🥈𝐒𝐢𝐥𝐯𝐞𝐫 𝐃𝐨𝐧𝐞𝐭𝐞𝐫"</li>
+                    </ul>
+                    <a href="https://discord.gg/stx1" class="btn btn-primary tier-btn">اشترك الآن</a>
+                </div>
+            </div>
+        </section>
+    <footer class="footer">
+        <div class="container footer-content">
+            <p>&copy; 2026 STEEL X Community. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

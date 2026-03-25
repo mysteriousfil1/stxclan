@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>#1 [ STX ] | Dashboard | لوحة التحكم</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&family=Outfit:wght@400;700;900&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/js/all.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.2/dist/gsap.min.js"></script>
+</head>
+<body class="dashboard-page">
+    <div id="loading-screen" class="loading-screen">
+        <div class="loader">
+            <h1 class="stx-text" data-i18n="nav_dash">لوحه التحكم</h1>
+        </div>
+    </div>
+
+    <div class="background-effects">
+        <div id="fire-container"></div>
+        <div id="smoke-container"></div>
+    </div>
+
+    <nav class="navbar">
+        <div class="container nav-content">
+            <div class="logo">
+                <h1 class="glow-text">STEEL <span>X</span></h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html" data-i18n="nav_home">الرئيسية</a></li>
+                <li><a href="vip.html" data-i18n="nav_vip">متجر VIP</a></li>
+                <li><a href="dashboard.html" class="active" data-i18n="nav_dash">لوحة التحكم</a></li>
+            </ul>
+            <div class="nav-actions">
+                <div class="lang-switcher">
+                    <select id="lang-select">
+                        <option value="ar">AR</option>
+                        <option value="en">EN</option>
+                        <option value="ru">RU</option>
+                        <option value="uk">UK</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="dashboard-main container">
+        <div class="dashboard-grid">
+            <aside class="dashboard-sidebar">
+                <div class="user-profile-header">
+                    <img id="user-avatar" src="https://cdn.discordapp.com/embed/avatars/0.png" alt="Avatar" class="avatar-dashboard">
+                    <h3 id="user-name">اسم المستخدم</h3>
+                    <p id="user-id">ID: 0000000000</p>
+                </div>
+                <div class="dashboard-menu">
+                    <a href="#" class="active"><i class="fas fa-user-circle"></i> <span data-i18n="dash_profile">الملف الشخصي</span></a>
+                    <a href="/api/logout" class="logout-link"><i class="fas fa-sign-out-alt"></i> <span data-i18n="logout">تسجيل الخروج</span></a>
+                </div>
+            </aside>
+
+            <section class="dashboard-content">
+                <div class="stats-overview">
+                    <div class="stat-box reveal-card">
+                        <i class="fas fa-calendar-alt icon-yellow"></i>
+                        <h4 data-i18n="dash_sub_limit">الأيام المتبقية</h4>
+                        <span id="user-sub-days" class="stat-value">--</span>
+                    </div>
+                    <div class="stat-box reveal-card">
+                        <i class="fas fa-clock icon-yellow"></i>
+                        <h4 data-i18n="dash_playtime">وقت اللعب (ساعة)</h4>
+                        <span id="user-playtime" class="stat-value">340</span>
+                    </div>
+                    <div class="stat-box reveal-card">
+                        <i class="fas fa-crown icon-yellow"></i>
+                        <h4 data-i18n="dash_vip_lvl">مستوى الـ VIP</h4>
+                        <span id="user-vip-status" class="stat-value">VVIP Golden</span>
+                    </div>
+                </div>
+
+                <div class="dashboard-details reveal-card">
+                    <h3 data-i18n="dash_info_title">معلومات الحساب والتواصل</h3>
+                    <div class="info-list">
+                        <div class="info-item">
+                            <span class="info-label" data-i18n="dash_roles">رتب الديسكورد</span>
+                            <span id="user-guild-status" class="info-value">STX Member</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label" data-i18n="dash_kd">أداء السيرفر (K/D)</span>
+                            <span id="user-kd" class="info-value">1.8</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label" data-i18n="dash_sub_pkg">الباقة الحالية</span>
+                            <span id="user-pkg-name" class="info-value">VIP Diamond</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-content">
+            <p>&copy; 2026 STEEL X Community. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

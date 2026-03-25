@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="STEEL X Community - أفضل سيرفر عربي وإنجليزي. انضم إلينا الآن لتجربة تكتيكية فريدة.">
+    <title>#1 [ STX ] | STEEL X Community | الصفحة الرئيسية</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&family=Outfit:wght@400;700;900&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/js/all.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.2/dist/gsap.min.js"></script>
+</head>
+<body>
+    <div id="loading-screen" class="loading-screen">
+        <div class="loader">
+            <h1 class="stx-text">STX</h1>
+            <div class="progress-bar"><div class="progress"></div></div>
+        </div>
+    </div>
+
+    <div class="background-effects">
+        <div id="fire-container"></div>
+        <div id="smoke-container"></div>
+    </div>
+
+    <nav class="navbar">
+        <div class="container nav-content">
+            <div class="logo">
+                <h1 class="glow-text">STEEL <span>X</span></h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active" data-i18n="nav_home">الرئيسية</a></li>
+                <li><a href="vip.html" data-i18n="nav_vip">متجر VIP</a></li>
+                <li><a href="#leaderboard" data-i18n="nav_leaderboard">المتصدرين</a></li>
+                <li><a href="dashboard.html" id="nav-dashboard" data-i18n="nav_dash">لوحة التحكم</a></li>
+            </ul>
+            <div class="nav-actions">
+                <div class="lang-switcher">
+                    <select id="lang-select">
+                        <option value="ar">AR</option>
+                        <option value="en">EN</option>
+                        <option value="ru">RU</option>
+                        <option value="uk">UK</option>
+                    </select>
+                </div>
+                <div class="auth-btn">
+                    <a href="/auth/discord" class="btn btn-discord" id="login-btn"><i class="fab fa-discord"></i> <span data-i18n="login">دخول</span></a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section id="hero" class="hero-section">
+            <div class="container hero-content">
+                <h2 class="sub-title reveal-text" data-i18n="hero_sub">مرحبًا بك في مجتمع</h2>
+                <h1 class="main-title reveal-text-big">STEEL X COMMUNITY</h1>
+                <p class="hero-desc reveal-text" data-i18n="hero_desc">سيرفر الاحترافي رقم 1 في الشرق الأوسط. تكتيك، تعاون، وقوة.</p>
+                <div class="hero-buttons">
+                    <a href="https://discord.gg/STX1" class="btn btn-primary" target="_blank" data-i18n="btn_discord">انضم للديسكورد</a>
+                    <a href="vip.html" class="btn btn-secondary" data-i18n="btn_vip">اشترك في VIP</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="server-status" class="status-section">
+            <div class="container">
+                <div class="server-card">
+                    <div class="server-info">
+                        <div class="server-header">
+                            <span class="status-indicator online"></span>
+                            <h3 data-i18n="server_status">حالة السيرفر المباشرة</h3>
+                        </div>
+                        <h2 id="server-name">#1 [ STX ] ARABIC And ENGLISH | STEEL X Community | discord.gg/STX1</h2>
+                        <div class="stats-grid">
+                            <div class="stat-item">
+                                <span class="label" data-i18n="stat_map">الخريطة</span>
+                                <span id="server-map" class="value">Al Basrah</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="label" data-i18n="stat_players">اللاعبين</span>
+                                <span id="server-players" class="value">0/100</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="label">IP</span>
+                                <span class="value">104.167.24.87:10202</span>
+                            </div>
+                        </div>
+                        <div class="player-bar-container">
+                            <div class="player-bar" id="player-progress" style="width: 0%;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="leaderboard" class="leaderboard-section">
+            <div class="container">
+                <h2 class="section-title" data-i18n="lb_title">لوحة المتصدرين</h2>
+                <div class="leaderboard-table-container">
+                    <table class="leaderboard-table">
+                        <thead>
+                            <tr>
+                                <th data-i18n="lb_rank">الترتيب</th>
+                                <th data-i18n="lb_player">اللاعب</th>
+                                <th>Kills</th>
+                                <th>Deaths</th>
+                                <th>Score</th>
+                            </tr>
+                        </thead>
+                        <tbody id="leaderboard-body">
+                            <!-- JS Will Fetch This -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-content">
+            <p>&copy; 2026 STEEL X Community. All Rights Reserved.</p>
+            <div class="social-links">
+                <a href="admin.html" class="admin-login-link" title="Admin Login"><i class="fas fa-user-shield"></i></a>
+                <a href="https://discord.gg/STX1"><i class="fab fa-discord"></i></a>
+                <a href="https://steamcommunity.com/id/m-saif38/"><i class="fab fa-steam"></i></a>
+                <a href="https://www.youtube.com/@STX_clanSQ"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Customer Support Chat Widget -->
+    <div class="chat-widget" id="chat-widget">
+        <div class="chat-bubble" id="chat-bubble">
+            <i class="fas fa-comments"></i>
+        </div>
+        <div class="chat-window" id="chat-window">
+            <div class="chat-header">
+                <h3 data-i18n="chat_title">مساعد STX الذكي</h3>
+                <i class="fas fa-times" id="close-chat" style="cursor: pointer;"></i>
+            </div>
+            <div class="chat-body" id="chat-body">
+                <div class="chat-msg bot-msg" data-i18n="chat_welcome">
+                    مرحباً بك في مجتمع STEEL X! كيف يمكنني مساعدك اليوم؟
+                </div>
+            </div>
+            <div class="chat-footer">
+                <div class="auto-replies">
+                    <button class="reply-btn" data-reply="vip_info" data-i18n="chat_vip_btn">معلومات VIP</button>
+                    <button class="reply-btn" data-reply="how_to_sub" data-i18n="chat_sub_btn">كيف أشترك؟</button>
+                    <button class="reply-btn" data-reply="discord_link" data-i18n="chat_discord_btn">رابط الديسكورد</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
